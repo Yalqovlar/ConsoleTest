@@ -25,7 +25,22 @@ public final class RandomEngine {
     }
 
 
-    //Bir nechta tasodifiy natural son qaytaradigan metod
+    //Berilga a va b oraliqdagi tasodifiy natural son qaytaradigan metod
+    public static Integer randomInterval(Integer a, Integer b){
+        if (a<b){
+            return random(b-a)+(a-1);
+        } else {
+            if (a>b){
+                return random(a-b)+(b-1);
+            }
+            else {
+                return 0;
+            }
+        }
+    }
+
+
+    //Bir nechta tasodifiy natural son qaytaradigan metod.
     public static ArrayList<Integer> randomMulti(Integer chegara, Integer soni){
         ArrayList<Integer> randoms = new ArrayList<Integer>();
         for (int i = 0; i <soni ; i++) {
