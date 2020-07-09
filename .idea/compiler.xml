@@ -10,5 +10,6 @@
         <module name="ConsoleTest" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
   </component>
 </project>
