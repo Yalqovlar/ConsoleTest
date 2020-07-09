@@ -1,6 +1,4 @@
-package maths.pure.arithmetic.arithmetic.number_feature;
-
-import maths.pure.arithmetic.number_feature.Number_Feature_Engine;
+package maths.pure.arithmetic.number_feature;
 
 public class Main {
     public static void main(String[] args) {
