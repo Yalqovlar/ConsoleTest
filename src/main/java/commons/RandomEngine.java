@@ -14,14 +14,8 @@ public final class RandomEngine {
 
     /*Bitta tasodifiy butun son qaytaradigan metod
     Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
-    public static double random(Integer chegara, boolean natural){
-        if (natural){
-            return ((int) (Math.random() * chegara) +1);
-        }
-        else {
+    public static double randomFloat(Double chegara){
             return ((Math.random() * chegara) +1);
-        }
-
     }
 
 
@@ -52,20 +46,14 @@ public final class RandomEngine {
 
     /*Bir nechta tasodifiy butun son qaytaradigan metod
     Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
-    public static ArrayList<Double> randomMulti(Integer chegara, Integer soni, boolean naturalmi){
+    public static ArrayList<Double> randomMulti(Double chegara, Integer soni){
         ArrayList<Double> randoms = new ArrayList<Double>();
-        if (naturalmi){
+
             for (int i = 0; i <soni ; i++) {
-                randoms.add(random(chegara,true));
+                randoms.add(randomFloat(chegara));
             }
             return randoms;
-        }
-        else {
-            for (int i = 0; i <soni ; i++) {
-                randoms.add(random(chegara,false));
-            }
-            return randoms;
-        }
+
 
     }
 
@@ -101,23 +89,24 @@ public final class RandomEngine {
     }
 
 
-    /*Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
+    /*Bir nechta tasodifiy takrorlanmaydigan butun son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
     Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
-    public static ArrayList<Double> randomMultiTakrorlanmasin(Integer chegara, Integer soni, boolean naturalmi) {
+    public static ArrayList<Double> randomMultiTakrorlanmasin(Double chegara, Integer soni) {
 
         ArrayList<Double> randoms = new ArrayList<>();
 
         double tempRandom;
-        if (naturalmi){
+
+
             if (soni <= chegara) {
 
 
                 for (int i = 0; i < soni; i++) {
                     boolean bool = true;
-                    tempRandom = random(chegara,true);
+                    tempRandom = randomFloat(chegara);
                     while (bool) {
                         if (randoms.contains(tempRandom)) {
-                            tempRandom = random(chegara,true);
+                            tempRandom = randomFloat(chegara);
                         } else {
                             randoms.add(tempRandom);
                             bool = false;
@@ -133,32 +122,6 @@ public final class RandomEngine {
                 return randoms;
             }
             return null;
-        }
-        else {
-            if (soni <= chegara) {
 
-
-                for (int i = 0; i < soni; i++) {
-                    boolean bool = true;
-                    tempRandom = random(chegara,false);
-                    while (bool) {
-                        if (randoms.contains(tempRandom)) {
-                            tempRandom = random(chegara,false);
-                        } else {
-                            randoms.add(tempRandom);
-                            bool = false;
-                        }
-
-
-                    }
-
-
-                }
-
-
-                return randoms;
-            }
-            return null;
-        }
     }
 }
