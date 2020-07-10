@@ -70,8 +70,7 @@ public final class RandomEngine {
     }
 
 
-    //Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara
-    // bo'lishi kerak, aks holda null qaytaradi
+    //Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
     public static ArrayList<Integer> randomMultiTakrorlanmasin(Integer chegara, Integer soni) {
         ArrayList<Integer> randoms = new ArrayList<Integer>();
         int tempRandom;
@@ -102,8 +101,7 @@ public final class RandomEngine {
     }
 
 
-    /*Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak,
-    aks holda null qaytaradi
+    /*Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
     Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
     public static ArrayList<Double> randomMultiTakrorlanmasin(Integer chegara, Integer soni, boolean naturalmi) {
 

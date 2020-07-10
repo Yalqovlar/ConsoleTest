@@ -1,4 +1,4 @@
-package maths.pure.arithmetic.arithmetic.number_feature.model;
+package maths.pure.arithmetic.number_feature.model;
 
 import java.util.ArrayList;
 
