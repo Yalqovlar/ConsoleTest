@@ -9,7 +9,7 @@ public class Main {
         ArrayList<Integer> randoms = new ArrayList<Integer>();
 //        for (int i = 0; i <10 ; i++) {
 //            System.out.println(RandomEngine.qaytar(5,6));
-            System.out.println(RandomEngine.random(1000000000));
+            System.out.println(RandomEngine.random(100.2));
 
 //            ArrayList<Integer> a = new ArrayList<>();
 //            a.add(3);

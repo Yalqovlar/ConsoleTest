@@ -14,7 +14,7 @@ public final class RandomEngine {
 
     /*Bitta tasodifiy butun son qaytaradigan metod
     Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
-    public static double randomFloat(Double chegara){
+    public static double random(Double chegara){
             return ((Math.random() * chegara) +1);
     }
 
@@ -50,7 +50,7 @@ public final class RandomEngine {
         ArrayList<Double> randoms = new ArrayList<Double>();
 
             for (int i = 0; i <soni ; i++) {
-                randoms.add(randomFloat(chegara));
+                randoms.add(random(chegara));
             }
             return randoms;
 
@@ -103,10 +103,10 @@ public final class RandomEngine {
 
                 for (int i = 0; i < soni; i++) {
                     boolean bool = true;
-                    tempRandom = randomFloat(chegara);
+                    tempRandom = random(chegara);
                     while (bool) {
                         if (randoms.contains(tempRandom)) {
-                            tempRandom = randomFloat(chegara);
+                            tempRandom = random(chegara);
                         } else {
                             randoms.add(tempRandom);
                             bool = false;
