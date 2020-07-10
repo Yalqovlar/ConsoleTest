@@ -1,4 +1,4 @@
 package maths.pure.geometry;
 
-public class AreaEngine {
+public final class AreaEngine {
 }
