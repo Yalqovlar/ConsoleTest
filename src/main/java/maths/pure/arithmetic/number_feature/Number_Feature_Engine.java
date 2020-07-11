@@ -1,5 +1,6 @@
 package maths.pure.arithmetic.number_feature;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -25,4 +26,11 @@ public final class Number_Feature_Engine {
         }
         return factors;
     }
+
+    //Berilgan juda katta sonni tub bo'luvchilarga ajratadi
+    public static ArrayList<BigInteger> primeFactorsPollardRho(String number){
+        BigInteger bigInteger=new BigInteger(number);
+        return PollardRho.factor(bigInteger);
+    }
+
 }
