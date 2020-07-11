@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Ekub_Ekuk_Engine {
- public static int ekub(int a, int b){
+ public int ekub(int a, int b){
   while (a != b)
   {
    if (a > b) a %= b;
@@ -15,11 +15,11 @@ public final class Ekub_Ekuk_Engine {
   }
   return a;
  }
- public static int ekuk(int a, int b){
+ public int ekuk(int a, int b){
  return a*b/ekub(a,b);
 
  }
- public static int multiEkub(List<Integer> list){
+ public int multiEkub(List<Integer> list){
   int a = 0;
   while (list.size()>1) {
    List<Integer> list1=new ArrayList<>();
@@ -31,7 +31,7 @@ public final class Ekub_Ekuk_Engine {
   a=list.get(0);
   return a;
  }
- public static int multiEkuk(List<Integer> list){
+ public int multiEkuk(List<Integer> list){
   int a = 0;
   while (list.size()>1) {
    List<Integer> list1=new ArrayList<>();
