@@ -19,7 +19,7 @@ public final class RandomEngine {
     }
 
 
-    //Berilga a va b oraliqdagi tasodifiy natural son qaytaradigan metod
+    // Berilga a va b oraliqdagi tasodifiy natural son qaytaradigan metod
     public static Integer randomInterval(Integer a, Integer b){
         if (a<b){
             return random(b-a)+(a-1);
@@ -51,7 +51,7 @@ public final class RandomEngine {
 
     // Bir nechta tasodifiy natural son qaytaradigan metod.
     public static ArrayList<Integer> randomMulti(Integer chegara, Integer soni){
-        ArrayList<Integer> randoms = new ArrayList<Integer>();
+        ArrayList<Integer> randoms = new ArrayList<>();
         for (int i = 0; i <soni ; i++) {
             randoms.add(random(chegara));
         }
@@ -62,7 +62,7 @@ public final class RandomEngine {
     /* Bir nechta tasodifiy butun son qaytaradigan metod
      * Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
     public static ArrayList<Double> randomMulti(Double chegara, Integer soni){
-        ArrayList<Double> randoms = new ArrayList<Double>();
+        ArrayList<Double> randoms = new ArrayList<>();
 
             for (int i = 0; i <soni ; i++) {
                 randoms.add(random(chegara));
