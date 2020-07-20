@@ -6,14 +6,14 @@ import java.util.ArrayList;
 public final class RandomEngine {
 
 
-    //Bitta tasodifiy natural son qaytaradigan metod
+    // Bitta tasodifiy natural son qaytaradigan metod
     public static Integer random(Integer chegara){
         return ((int) (Math.random() * chegara) +1);
     }
 
 
-    /*Bitta tasodifiy butun son qaytaradigan metod
-    Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
+    /* Bitta tasodifiy butun son qaytaradigan metod
+     * Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
     public static double random(Double chegara){
             return ((Math.random() * chegara) +1);
     }
@@ -33,7 +33,7 @@ public final class RandomEngine {
         }
     }
 
-    //Berilga a va b oraliqdagi tasodifiy butun son qaytaradigan metod
+    // Berilga a va b oraliqdagi tasodifiy butun son qaytaradigan metod
     public static double randomIntervalFloat(double a, double b){
         if (a<b){
             return random(b-a)+(a-1);
@@ -49,7 +49,7 @@ public final class RandomEngine {
 
 
 
-    //Bir nechta tasodifiy natural son qaytaradigan metod.
+    // Bir nechta tasodifiy natural son qaytaradigan metod.
     public static ArrayList<Integer> randomMulti(Integer chegara, Integer soni){
         ArrayList<Integer> randoms = new ArrayList<Integer>();
         for (int i = 0; i <soni ; i++) {
@@ -59,8 +59,8 @@ public final class RandomEngine {
     }
 
 
-    /*Bir nechta tasodifiy butun son qaytaradigan metod
-    Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
+    /* Bir nechta tasodifiy butun son qaytaradigan metod
+     * Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
     public static ArrayList<Double> randomMulti(Double chegara, Integer soni){
         ArrayList<Double> randoms = new ArrayList<Double>();
 
@@ -73,7 +73,7 @@ public final class RandomEngine {
     }
 
 
-    //Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
+    // Bir nechta tasodifiy takrorlanmaydigan natural son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
     public static ArrayList<Integer> randomMultiTakrorlanmasin(Integer chegara, Integer soni) {
         ArrayList<Integer> randoms = new ArrayList<Integer>();
         int tempRandom;
@@ -104,8 +104,8 @@ public final class RandomEngine {
     }
 
 
-    /*Bir nechta tasodifiy takrorlanmaydigan butun son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
-    Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
+    /* Bir nechta tasodifiy takrorlanmaydigan butun son qaytaradigan metod, bunda soni<=chegara bo'lishi kerak, aks holda null qaytaradi
+     * Agar "boolean natural" o'zgaruvchi rost bo'lsa natural, yolg'on bo'lsa kasr son qaytaradi*/
     public static ArrayList<Double> randomMultiTakrorlanmasin(Double chegara, Integer soni) {
 
         ArrayList<Double> randoms = new ArrayList<>();
