@@ -10,7 +10,7 @@ public final class PollardRho {
     private final static BigInteger ZERO = new BigInteger("0");
     private final static BigInteger ONE  = new BigInteger("1");
     private final static BigInteger TWO  = new BigInteger("2");
-    private final static Random random = new Random();
+    private final static SecureRandom random = new SecureRandom();
 
     public final static ArrayList<BigInteger> arrayList=new ArrayList<>();
 
