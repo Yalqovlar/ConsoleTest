@@ -33,4 +33,68 @@ public final class Vector {
     public double[] songa_kupaytmasi(double x1, double y1, double t) {
         return new double[]{x1 * t, y1 * t};
     }
+
+    /**
+     * Berilgan a(x1, y1) vektorning uzunligi.
+     * Natijani musbat double qiymatda qaytaradi.
+     */
+    public double vektor_uzunligi(double x1, double y1) {
+        return Math.sqrt(x1 * x1 + y1 * y1);
+    }
+
+    /**
+     * a(x1; y1) va b(x2; y2) vektorlarning skalyar ko'paytmasi.
+     * Natijani double qiymatda qaytaradi.
+     */
+    public double skalyar_kupaytma(double x1, double y1, double x2, double y2) {
+        return x1 * x2 + y1 * y2;
+    }
+
+    /**
+     * Agar berilgan a va b vektorlarning uzunliklari va ular orasidagi
+     * burchak aniq bo'lsa ularning skalyar ko'paytmasini topish.
+     * Burchak radian da berilishi kerak.
+     * Natijani double qiymatda qaytaradi.
+     */
+    public double skalyar_kupaytma_burchak_orqali(double a, double b, double burchak) {
+        return a * b * burchak;
+    }
+
+    /**
+     * Nol ga teng bo'lmagan ikki vektorning perpendikulyarligini tekshirish.
+     * Natijani boolean qaytaradi.
+     */
+    public boolean perpendikulyarlik_sharti(double x1, double y1, double x2, double y2) {
+        return skalyar_kupaytma(x1, y1, x2, y2) == 0;
+    }
+
+    public boolean perpendikulyarlik_sharti(double a, double b, double burchak) {
+        return skalyar_kupaytma_burchak_orqali(a, b, burchak) == 0;
+    }
+
+    /**
+     * a(x1; y1) va b(x2; y2) vektorlar orasidagi burchak kosinusini hisoblash.
+     * Natijani double qiymatda qaytaradi. Ushbu qiymat cos ning qiymati,
+     * burchakning radian dagi qiymati emas.
+     */
+    public double vektorlar_orasidagi_burchak_cos(double x1, double y1, double x2, double y2) {
+        return (x1 * x2 + y1 * y2) / (Math.sqrt(x2 * x2 + y2 * y2) * Math.sqrt(x1 * x1 + y1 * y2));
+    }
+
+    /**
+     * Agar vektorlarning skalyar ko'paytmasi ab va ularning a va b uzunliklari
+     * ma'lum bo'lsa, ushbu vektorlar orasidagi burchak kosinusini hisoblash.
+     * Natijani double qaytaradi.
+     */
+    public double cos_vektorlar_orasi(double ab, double a, double b) {
+        return ab / (a * b);
+    }
+
+    /**
+     * a(x1; y1) va b(x2; y2) vektorlarning kollinearlik sharti.
+     * Boolean qaytaradi.
+     */
+    public boolean is_kollinear(double x1, double y1, double x2, double y2) {
+        return (x2 / x1) == (y2 / y1);
+    }
 }
