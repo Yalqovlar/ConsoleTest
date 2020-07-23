@@ -64,4 +64,47 @@ public final class Vector3d {
     public double vektor3d_skalyar_burchak_orqali(double a, double b, double burchak) {
         return a * b * Math.cos(burchak);
     }
+
+    /**
+     * a(x1, y1, z1) va b(x2, y2, z2) vektorlar orasidagi
+     * burchak kosinusini hisoblash.
+     * Natija cos(alfa) ning qiymati bo'ladi va double qaytariladi.
+     */
+    public double vektor3d_orasidagi_burchak_cos(double x1, double y1, double z1, double x2, double y2, double z2) {
+        return (x1 * x2 + y1 * y2 + z1 * z2) /
+                (Math.sqrt(x2 * x2 + y2 * y2 + z2 * z2) * Math.sqrt(x1 * x1 + y1 * y1 + z1 * z1));
+    }
+
+    /**
+     * "NOL" ga teng bo'lmagan a(x1, y1, z1) va b(x2, y2, z2)
+     * vektorlarning perpendikulyarlik sharti.
+     * Natija boolean qaytariladi.
+     */
+    public boolean vektor3d_is_perpendikulyar(double x1, double y1, double z1, double x2, double y2, double z2) {
+        return x1 * x2 + y1 * y2 + z1 * z2 == 0;
+    }
+
+    /**
+     * "NOL" ga teng bo'lmagan a(x1, y1, z1) va b(x2, y2, z2)
+     * vektorlarning kollinearlik sharti.
+     * Natija boolean qaytariladi.
+     */
+    public boolean vektor3d_is_kolleniar(double x1, double y1, double z1, double x2, double y2, double z2) {
+        return (x2 / x1) == (y2 / y1) && (x2 / x1) == (z2 / z1);
+    }
+
+    /**
+     * Uchlari A(x1, y1, z1), B(x2, y2, z2), C(x3, y3, z3)
+     * nuqtalarda yotgan uchburchak medianalri kesishgan nuqta
+     * koordinatalari.
+     * Kesishish nuqtasi koordinatalri 3 elementli massiv ko'rinishida
+     * qaytariladi.
+     */
+    public double[] vektor3d_mediana_kesishmasi(
+            double x1, double y1, double z1,
+            double x2, double y2, double z2,
+            double x3, double y3, double z3
+    ) {
+        return new double[]{(x1 + x2 + x3) / 3, (y1 + y2 + y3) / 3, (z1 + z2 + z3) / 3};
+    }
 }
