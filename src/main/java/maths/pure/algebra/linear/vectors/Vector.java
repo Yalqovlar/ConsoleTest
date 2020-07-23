@@ -57,7 +57,7 @@ public final class Vector {
      * Natijani double qiymatda qaytaradi.
      */
     public double skalyar_kupaytma_burchak_orqali(double a, double b, double burchak) {
-        return a * b * burchak;
+        return a * b * Math.cos(burchak);
     }
 
     /**
