@@ -13,7 +13,7 @@ public final class Vector {
      * AB = a vektorning koordinatalari.
      * Natijani ikki o'lchamli massiv ko'rinishida qaytaradi.
      */
-    public double[] vektor_koordinatlari(double a1, double a2, double b1, double b2) {
+    public static double[] vektor_koordinatlari(double a1, double a2, double b1, double b2) {
         return new double[]{b2 - a2, b1 - a1};
     }
 
@@ -22,7 +22,7 @@ public final class Vector {
      * Yangi hosil bo'lgan c vektor koordinatalarini ikki o'lchovli
      * massiv ko'rinishida qaytaradi.
      */
-    public double[] ayirmasi(double x1, double y1, double x2, double y2) {
+    public static double[] ayirmasi(double x1, double y1, double x2, double y2) {
         return new double[]{x1 - x2, y1 - y2};
     }
 
@@ -30,7 +30,7 @@ public final class Vector {
      * Berilgan a(x1, y1) vektorni t songa ko'paytirish.
      * Natijani ikki o'lchamli massiv ko'rinishida qaytaradi.
      */
-    public double[] songa_kupaytmasi(double x1, double y1, double t) {
+    public static double[] songa_kupaytmasi(double x1, double y1, double t) {
         return new double[]{x1 * t, y1 * t};
     }
 
@@ -38,7 +38,7 @@ public final class Vector {
      * Berilgan a(x1, y1) vektorning uzunligi.
      * Natijani musbat double qiymatda qaytaradi.
      */
-    public double vektor_uzunligi(double x1, double y1) {
+    public static double vektor_uzunligi(double x1, double y1) {
         return Math.sqrt(x1 * x1 + y1 * y1);
     }
 
@@ -46,7 +46,7 @@ public final class Vector {
      * a(x1; y1) va b(x2; y2) vektorlarning skalyar ko'paytmasi.
      * Natijani double qiymatda qaytaradi.
      */
-    public double skalyar_kupaytma(double x1, double y1, double x2, double y2) {
+    public static double skalyar_kupaytma(double x1, double y1, double x2, double y2) {
         return x1 * x2 + y1 * y2;
     }
 
@@ -56,7 +56,7 @@ public final class Vector {
      * Burchak radian da berilishi kerak.
      * Natijani double qiymatda qaytaradi.
      */
-    public double skalyar_kupaytma_burchak_orqali(double a, double b, double burchak) {
+    public static double skalyar_kupaytma_burchak_orqali(double a, double b, double burchak) {
         return a * b * Math.cos(burchak);
     }
 
@@ -64,11 +64,11 @@ public final class Vector {
      * Nol ga teng bo'lmagan ikki vektorning perpendikulyarligini tekshirish.
      * Natijani boolean qaytaradi.
      */
-    public boolean perpendikulyarlik_sharti(double x1, double y1, double x2, double y2) {
+    public static boolean perpendikulyarlik_sharti(double x1, double y1, double x2, double y2) {
         return skalyar_kupaytma(x1, y1, x2, y2) == 0;
     }
 
-    public boolean perpendikulyarlik_sharti(double a, double b, double burchak) {
+    public static boolean perpendikulyarlik_sharti(double a, double b, double burchak) {
         return skalyar_kupaytma_burchak_orqali(a, b, burchak) == 0;
     }
 
@@ -77,7 +77,7 @@ public final class Vector {
      * Natijani double qiymatda qaytaradi. Ushbu qiymat cos ning qiymati,
      * burchakning radian dagi qiymati emas.
      */
-    public double vektorlar_orasidagi_burchak_cos(double x1, double y1, double x2, double y2) {
+    public static double vektorlar_orasidagi_burchak_cos(double x1, double y1, double x2, double y2) {
         return (x1 * x2 + y1 * y2) / (Math.sqrt(x2 * x2 + y2 * y2) * Math.sqrt(x1 * x1 + y1 * y2));
     }
 
@@ -86,7 +86,7 @@ public final class Vector {
      * ma'lum bo'lsa, ushbu vektorlar orasidagi burchak kosinusini hisoblash.
      * Natijani double qaytaradi.
      */
-    public double cos_vektorlar_orasi(double ab, double a, double b) {
+    public static double cos_vektorlar_orasi(double ab, double a, double b) {
         return ab / (a * b);
     }
 
@@ -94,7 +94,7 @@ public final class Vector {
      * a(x1; y1) va b(x2; y2) vektorlarning kollinearlik sharti.
      * Boolean qaytaradi.
      */
-    public boolean is_kollinear(double x1, double y1, double x2, double y2) {
+    public static boolean is_kollinear(double x1, double y1, double x2, double y2) {
         return (x2 / x1) == (y2 / y1);
     }
 }
