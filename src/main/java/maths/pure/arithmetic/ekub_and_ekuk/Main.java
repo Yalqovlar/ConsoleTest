@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         long startTime;
 //                List<Integer> list=new ArrayList<>();
@@ -24,26 +25,28 @@ public class Main {
 //                System.out.println( "Ikkitadan ortiq sonning ekubi Shteynda  "+Ekub_Ekuk_Engine.gcdMultiEkub(list));
 //                System.out.println( "Ikkitadan ortiq sonning ekuki Shteynda  "+Ekub_Ekuk_Engine.gcdMultiEkuk(list));
 //
-        ArrayList<Integer> randoms=RandomEngine.randomMulti(15,10);
+        ArrayList<Integer> randoms=RandomEngine.randomMulti(150,50000);
 //        ArrayList<Integer> randoms2=RandomEngine.randomMulti(15,10);
         System.out.println(randoms);
 //        System.out.println(randoms2);
 
-        startTime = System.nanoTime();
-        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms));
-        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms));
-        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms));
-        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms));
-//        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms2));
-        System.out.printf("gcdMultiEkub: %d ms%n", (System.nanoTime() - startTime) / 1000000);
+
 
         startTime = System.nanoTime();
-        System.out.println(Ekub_Ekuk_Engine.multiEkukEvklit(randoms));
-        System.out.println(Ekub_Ekuk_Engine.multiEkukEvklit(randoms));
-        System.out.println(Ekub_Ekuk_Engine.multiEkukEvklit(randoms));
-        System.out.println(Ekub_Ekuk_Engine.multiEkukEvklit(randoms));
+        System.out.println(Ekub_Ekuk_Engine.multiEkubEvlit(randoms));
+        System.out.println(Ekub_Ekuk_Engine.multiEkubEvlit(randoms));
+        System.out.println(Ekub_Ekuk_Engine.multiEkubEvlit(randoms));
+        System.out.println(Ekub_Ekuk_Engine.multiEkubEvlit(randoms));
 //        System.out.println(Ekub_Ekuk_Engine.multiEkukEvklit(randoms2));
         System.out.printf("multiEkubEvlit: %d ms%n", (System.nanoTime() - startTime) / 1000000);
+
+        startTime = System.nanoTime();
+        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkub(randoms));
+        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkub(randoms));
+        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkub(randoms));
+        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkub(randoms));
+//        System.out.println(Ekub_Ekuk_Engine.gcdMultiEkuk(randoms2));
+        System.out.printf("gcdMultiEkub: %d ms%n", (System.nanoTime() - startTime) / 1000000);
 
 
 

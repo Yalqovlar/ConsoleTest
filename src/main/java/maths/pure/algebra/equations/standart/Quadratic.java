@@ -1,14 +1,15 @@
 package maths.pure.algebra.equations.standart;
 
-import maths.pure.algebra.equations.standart.model.RootQD;
+import maths.pure.algebra.equations.standart.model.QuadraticModel;
+import maths.pure.algebra.equations.standart.model.RootQ;
 
 public interface Quadratic {
-     static RootQD sQED(double a, double b, double c){
+     static QuadraticModel sQED(double a, double b, double c){
         if (a==0){
             return null;
         }
         else {
-            return new RootQD(a,b,c);
+            return new QuadraticModel(a,b,c);
         }
     }
 }
